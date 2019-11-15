@@ -1,49 +1,100 @@
+
+@font-face {
+    font-family: 'bignoodletitlingregular';
+    src: url('fonts/big_noodle_titling-webfont.woff2') format('woff2'),
+         url('fonts/big_noodle_titling-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 * {
     box-sizing: border-box;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
-    background-color: gray;
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
     z-index: 10;
-    max-height: 80px
+    max-height: 70px;
+    background-color: white;
 }
 
 nav {
     display: flex;
     align-items: center;
-    
+    max-height: 70px;
+    border-bottom: 2px solid #961e23;
 }
 
-div{
+.hamburger{
     display: none;
 }
 
-ul {
+
+
+.nav-list {
     margin-left: auto;
     list-style: none;
     display: flex;
 }
 
-li {
+
+.nav-link {
     margin-right: 10px;
+    color: #961e23;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'bignoodletitlingregular';
+    border-bottom: 1px solid white;
 }
+
+
 
 .navlogo {
     height: 100px;
     width: 84px;
 }
 
-
-p {
-    max-width: 50%;
+img {
+    max-width: 310px;
+}
+h1 {
+    font-size: 48px;
 }
 
-.screenshot{
-    margin-bottom: 10px;
+h2{
+    font-size: 32px;
+}
+
+h1, h2{
+    color: #961e23;
+    font-family: 'bignoodletitlingregular';
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    width: 90%;
+    max-width: 550px;
+    font-family: 'Quattrocento', serif;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+section {
+    width: 90%;
 }
 
 
@@ -51,61 +102,140 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
-    background-color: lightgray;
+    margin-top: 60px;
+    border-bottom: 1px solid #961e23;
+}
+
+.welcome{
+    font-size: 34px;
+}
+
+.headline {
+    text-align: center;
 }
 
 .aboutme{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: darkgray;
+    border-bottom: 1px solid #961e23;
+    padding-bottom: 20px;
+}
+
+.text {
+    text-indent: 2em;
 }
 
 .mywork {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: gray;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #961e23;
+    
 }
+
+.project-title{
+    font-size: 32px;
+}
+
+h3{
+    font-family: 'bignoodletitlingregular';
+    color: #961e23;
+    font-size: 20px;
+    margin-bottom: -10px;
+}
+
 
 .contactme {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: darkgray;
+    border-bottom: 2px solid #961e23;
+    margin-bottom: 10px;
 }
 
-.tech {
-    margin: 10px;
-}
-
-.buttons{
+.tech-list{
     display: flex;
 }
 
 
+.tech {   
+    font-family: 'bignoodletitlingregular';
+    color: #961e23;
+    font-size: 20px;
+    margin-right: 10px;
+    list-style: none;
+    margin-bottom: -20px;
+}
+
+.email {
+    color: #961e23;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'bignoodletitlingregular';
+}
+a[href^="mailto"] { 
+    color: #961e23; 
+}
+
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+button{
+    color: white;
+    background-color: #961e23;
+    border: black;
+    padding: 15px;
+    margin: 0px 10px 15px 0px;
+    font-size: 16px;
+    font-family: 'bignoodletitlingregular'
+}
+
+
 .imglink{
-    height: 150px;
-    width: 150px;
     margin-top: 10px;
+    width: 64px;
+    margin: 10px 10px 30px 10px;
 }
 
 
 @media screen and (max-width: 991px) {
-    /* start of large tablet styles */
-        ul{
-            display: none;
-        }
-        div{
-            display: block;
-        }
-
-        .hamburger{
-            font-size: 40px;
-            margin-left: auto;
-            margin-right: 10px;
-        }
-        
+  
+    .hamburger{
+        font-size: 40px;
+        margin-left: auto;
+        margin-right: 10px;
+        display: block;
+        color: #961e23;
     }
+    
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 53px;
+        right:0;
+    }
+
+    .nav-link{
+        text-align: center;
+        padding: 20px 30px;
+        background-color: #961e23;
+        color: white;
+    }
+    
+    .hidden{
+        display: none;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
