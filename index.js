@@ -28,6 +28,8 @@ function contactScroll(){
         },500)
     });
 }
+
+
     
 function domReady(){
     toggleList();
