@@ -5,7 +5,10 @@
          url('fonts/big_noodle_titling-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+h4 {
+    display: none;
 }
 
 * {
@@ -185,14 +188,15 @@ a[href^="mailto"] {
     justify-content: center;
 }
 
-button{
+.button{
     color: white;
     background-color: #961e23;
     border: black;
     padding: 15px;
     margin: 0px 10px 15px 0px;
     font-size: 16px;
-    font-family: 'bignoodletitlingregular'
+    font-family: 'bignoodletitlingregular';
+    text-decoration: none;
 }
 
 .imglink{
